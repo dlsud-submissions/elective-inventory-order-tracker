@@ -4,26 +4,26 @@
     ViewData["Title"] = "Product Details";
 }
 
-<h1>Details</h1>
+<div class="page-header">
+    <h1 class="mb-0">Product Details</h1>
+</div>
 
-<div>
-    <h4>Product</h4>
-    <hr />
-    <dl class="row">
-        <dt class="col-sm-2">@Html.DisplayNameFor(model => model.SKU)</dt>
-        <dd class="col-sm-10">@Html.DisplayFor(model => model.SKU)</dd>
+<div class="content-card">
+    <dl class="row mb-0">
+        <dt class="col-sm-3">@Html.DisplayNameFor(model => model.SKU)</dt>
+        <dd class="col-sm-9">@Html.DisplayFor(model => model.SKU)</dd>
 
-        <dt class="col-sm-2">@Html.DisplayNameFor(model => model.Name)</dt>
-        <dd class="col-sm-10">@Html.DisplayFor(model => model.Name)</dd>
+        <dt class="col-sm-3">@Html.DisplayNameFor(model => model.Name)</dt>
+        <dd class="col-sm-9">@Html.DisplayFor(model => model.Name)</dd>
 
-        <dt class="col-sm-2">@Html.DisplayNameFor(model => model.Price)</dt>
-        <dd class="col-sm-10">@Html.DisplayFor(model => model.Price)</dd>
+        <dt class="col-sm-3">@Html.DisplayNameFor(model => model.Price)</dt>
+        <dd class="col-sm-9">@Html.DisplayFor(model => model.Price)</dd>
 
-        <dt class="col-sm-2">@Html.DisplayNameFor(model => model.StockQuantity)</dt>
-        <dd class="col-sm-10">@Html.DisplayFor(model => model.StockQuantity)</dd>
+        <dt class="col-sm-3">@Html.DisplayNameFor(model => model.StockQuantity)</dt>
+        <dd class="col-sm-9">@Html.DisplayFor(model => model.StockQuantity)</dd>
     </dl>
 </div>
-<div>
+<div class="mt-3">
     <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-secondary">Edit</a>
     <a asp-action="Index" class="btn btn-outline-secondary">Back to List</a>
 </div>

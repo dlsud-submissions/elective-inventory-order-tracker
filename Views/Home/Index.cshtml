@@ -1,8 +1,21 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
+@{
+    ViewData["Title"] = "Home";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div class="hero text-center">
+    <h1 class="display-5">ECommerceTracker</h1>
+    <p class="lead mb-0">Inventory &amp; Order Tracking, built on ASP.NET Core MVC and EF Core.</p>
+</div>
+
+<div class="dashboard-grid">
+    <a asp-controller="Products" asp-action="Index" class="dashboard-card">
+        <div class="icon">📦</div>
+        <h3>Products</h3>
+        <p>Browse inventory, check stock levels, and manage product records.</p>
+    </a>
+    <a asp-controller="Orders" asp-action="Index" class="dashboard-card">
+        <div class="icon">🧾</div>
+        <h3>Orders</h3>
+        <p>Track customer orders and their totals from placement to fulfillment.</p>
+    </a>
 </div>
