@@ -51,7 +51,7 @@ public class ApplicationDbContext : DbContext
 
         // Product (1) -> OrderItem (many)
         modelBuilder.Entity<OrderItem>()
-            .HasOne<Product>("ProductRef")
+            .HasOne(oi => oi.Product)
             .WithMany(p => p.OrderItems)
             .HasForeignKey(oi => oi.ProductId)
             .OnDelete(DeleteBehavior.Restrict);
